@@ -4,16 +4,22 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import en from './locales/en.json'
 import ja from './locales/ja.json'
+import zhCN from './locales/zh-CN.json'
+import zhTW from './locales/zh-TW.json'
 
 export const SUPPORTED_LANGUAGES = [
   { id: 'en', name: 'English' },
   { id: 'ja', name: '日本語' },
+  { id: 'zh-CN', name: '简体中文' },
+  { id: 'zh-TW', name: '繁體中文' },
 ] as const
 
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: en },
     ja: { translation: ja },
+    'zh-CN': { translation: zhCN },
+    'zh-TW': { translation: zhTW },
   },
   lng: undefined,
   fallbackLng: 'en',
